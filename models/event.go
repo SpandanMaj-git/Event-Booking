@@ -1,7 +1,22 @@
 package models
 
-import "fmt"
+import "time"
 
-func main() {
-	fmt.Println("hello senor")
+type Event struct {
+	ID          int
+	Name        string
+	Description string
+	Location    string
+	DateTime    time.Time
+	UserID      int
+}
+
+var events = []Event{}
+
+func (e Event) Save() {
+	events = append(events, e)
+}
+
+func GetEvents() []Event {
+	return events
 }
