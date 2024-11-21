@@ -1,1 +1,1 @@
-# Even-Booking
+# Event-Booking
