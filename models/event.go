@@ -11,7 +11,20 @@ type Event struct {
 	UserID      int
 }
 
-var events = []Event{}
+var events = []Event{
+	{
+		ID:          122,
+		Name:        "Go Meet",
+		Description: "just a simple desc",
+		Location:    "KJoiolkat",
+		DateTime:    time.Now(), // Use time.Now() instead of Clock()
+		UserID:      1,
+	},
+}
+
+func main() {
+	// Do something with events
+}
 
 func (e Event) Save() {
 	events = append(events, e)
