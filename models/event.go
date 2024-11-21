@@ -17,7 +17,7 @@ var events = []Event{
 		Name:        "Go Meet",
 		Description: "just a simple desc",
 		Location:    "KJoiolkat",
-		DateTime:    time.Now(), // Use time.Now() instead of Clock()
+		DateTime:    time.Now(),
 		UserID:      1,
 	},
 }

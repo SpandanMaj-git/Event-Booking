@@ -3,11 +3,13 @@ package main
 import (
 	"net/http"
 
+	db "github.com/SpandanMaj-git/Even-Booking/DB"
 	"github.com/SpandanMaj-git/Even-Booking/models"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	db.InitDB()
 	r := gin.Default()
 	r.GET("/events", GetEvents)
 	r.POST("/events", createEvent)
